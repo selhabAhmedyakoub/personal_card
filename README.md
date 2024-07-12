@@ -15,7 +15,7 @@ It is designed to be fully responsive and visually engaging, using modern CSS te
 - **CSS3:** Styling the components with advanced techniques (Flexbox, CSS Grid).
 
 ## Screenshot
-![](/images/screenshot.jpg)
+![](Screenshot.png)
 
 ## Acknowledgements
 - **Almadrsa Diploma:** For providing comprehensive front-end development training.
