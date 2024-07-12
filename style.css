@@ -1,0 +1,216 @@
+:root {
+  --s: 100px; /* control the size*/
+  --c1: #c6b27b;
+  --c2: #ffffff;
+  --color-white: #fff;
+}
+/* CSS Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+a {
+  color: inherit;
+  display: inline-block;
+}
+
+button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  border: 0;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.6rem;
+  font-family: "Courier New", Courier, monospace;
+}
+
+/* End CSS Reset */
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  height: 100vh;
+  background: conic-gradient(
+      var(--c1) 25%,
+      #0000 0 50%,
+      var(--c2) 0 75%,
+      #0000 0
+    ),
+    linear-gradient(
+      135deg,
+      var(--c1) 0 12.5%,
+      var(--c2) 0 25%,
+      var(--c1) 0 37.5%,
+      var(--c2) 0 62.5%,
+      var(--c1) 0 75%,
+      var(--c2) 0 87.5%,
+      var(--c1) 0
+    );
+  background-size: var(--s) var(--s);
+}
+.switch {
+  font-size: 50px;
+}
+.lights-control {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  position: absolute;
+  top: 2rem;
+}
+
+.lights-label {
+  width: 4.2rem;
+  height: 2.2rem;
+  border-radius: 1.5rem;
+  background-color: #000;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  padding: 0.3rem 0.4rem;
+}
+.lights-label::after {
+  content: "";
+  display: block;
+  width: 1.6rem;
+  height: 1.6rem;
+  background-color: var(--color-white);
+  border-radius: 50%;
+  transition: 0.3s;
+}
+.lights-input {
+  display: none;
+}
+.lights-input:checked + .lights-label {
+  background-color: var(--color-white);
+}
+.lights-input:checked + .lights-label::after {
+  transform: translateX(2rem);
+  background-color: green;
+}
+.lights {
+  opacity: 0;
+  visibility: hidden;
+  position: absolute;
+  z-index: 2;
+  transition: all 0.3s;
+}
+.card {
+  display: flex;
+  width: 37rem;
+  flex-direction: column;
+  border-radius: 1rem;
+  overflow: hidden;
+  background-color: var(--color-white);
+  margin: 0 auto;
+  box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.2);
+}
+.container:has(.lights-input:checked) .lights {
+  opacity: 1;
+  visibility: visible;
+  /* display: block; */
+}
+
+.bulb-odd {
+  animation: party 0.5s infinite alternate;
+}
+.bulb-even {
+  animation: party 0.5s infinite alternate-reverse;
+}
+@keyframes party {
+  from {
+    fill: #ff0000;
+  }
+  to {
+    fill: #fff500;
+  }
+}
+.top {
+  height: 10rem;
+
+  --s: 4px; /* control the size*/
+  --c1: #c6b27b;
+  --c2: #ffffff;
+
+  --g: #0000 66%, var(--c1) 67% 98%, #0000;
+  background: radial-gradient(30% 50% at 30% 100%, var(--g)),
+    radial-gradient(30% 50% at 70% 0%, var(--g)) var(--s) 0,
+    repeating-linear-gradient(90deg, var(--c1) 0 10%, var(--c2) 0 50%);
+  background-size: calc(10 * var(--s)) calc(6 * var(--s));
+}
+.middle {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 15rem;
+  z-index: 1;
+}
+.profile_pic {
+  height: 12rem;
+  width: 12rem;
+  border-radius: 50%;
+  margin-top: -6rem;
+  border: 0.4rem solid var(--color-white);
+  margin-bottom: 3rem;
+}
+.title {
+  font-size: 2.2rem;
+}
+.profession {
+  font-size: 1.6rem;
+}
+/* bottom */
+.bottom {
+  display: flex;
+  gap: 2rem;
+  border-top: 0.1rem solid #c4c4c4;
+}
+.column {
+  flex: 1;
+  padding: 1.8rem 1.5rem;
+}
+.column:nth-of-type(1),
+.column:nth-of-type(2) {
+  border-right: 0.1rem solid #c4c4c4;
+}
+.username {
+  font-size: 1.2rem;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.icons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 0.5rem;
+}
+.icon {
+  width: 2rem;
+  height: 2rem;
+}
+.username {
+  font-size: 1.2rem;
+  text-align: center;
+}
