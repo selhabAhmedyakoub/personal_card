@@ -1,8 +1,5 @@
-# Personal Card
-This project is a personal card website built solely using HTML and CSS , developed as part of the "HTML and CSS projects" course in the Almadrsa Diploma for learning front-end development.
-
-It is designed to be fully responsive and visually engaging, using modern CSS techniques like Flexbox and Grid, animations for modular and maintainable styling.
-
+# Browser Extension Landing Page
+This project is a well-designed, user-friendly landing page for a browser extension available on both Chrome and Edge. It provides users with essential information about the extension, including its features and installation instructions. The design is responsive and modern, utilizing HTML and CSS Flexbox for layout and smooth animations for an engaging user experience.
 ## Features
 
 - Responsive Design: Optimized for various screen sizes and devices using CSS Grid and Flexbox.
@@ -13,6 +10,7 @@ It is designed to be fully responsive and visually engaging, using modern CSS te
 
 - **HTML5:** Markup language for creating the structure of the web pages.
 - **CSS3:** Styling the components with advanced techniques (Flexbox, CSS Grid).
+- **SASS:** enhance the development process and make stylesheets more maintainable
 
 ## Screenshot
 ![](Screenshot.png)
